@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel USA</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Adventure Travels</div>
+        <nav>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#trips">Trips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore the United States</h1>
+        <p>Discover unforgettable trips across North America.</p>
+        <p>Quel sera votre prochain voyage ?
+            Survolez la carte et sélectionnez le continent vers lequel vous souhaitez voyager. 
+            Nous vous afficherons notre sélection de voyages sur mesure vers ce continent. A vous de trier selon vos envies !</p>
+        <p>Les États-Unis offrent une diversité incroyable de voyages pour tous les goûts. Les grandes villes comme New York, Los Angeles ou Chicago séduisent par leur architecture, leur culture et leurs attractions emblématiques, tandis que les parcs nationaux tels que le Grand Canyon, Yellowstone ou Yosemite invitent à la randonnée, au kayak et à la découverte de paysages spectaculaires. Les amateurs d’aventure peuvent parcourir la mythique Route 66 ou la Pacific Coast Highway pour un road trip inoubliable, et ceux passionnés d’histoire et de culture apprécieront les musées et monuments de Washington D.C., Boston ou La Nouvelle-Orléans. Que l’on cherche l’effervescence urbaine, la nature sauvage ou un voyage sur les routes légendaires, les États-Unis promettent des expériences uniques et des souvenirs mémorables.</p>
+        <button onclick="scrollToContact()">Book Your Trip</button>
+    </section>
+
+    <!-- Featured Trips -->
+    <section id="trips" class="featured-trips">
+        <h2>Our Favorite Trips</h2>
+        <div class="trip-cards">
+            <div class="trip-card"
+                 onclick="window.open('New York Page.html', '_blank')"
+                 style="cursor:pointer;">
+                <img src="https://via.placeholder.com/300x200" alt="New York">
+                <h3>New York City</h3>
+                <p>The city that never sleeps.</p>
+            </div>
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Grand Canyon">
+                <h3>Grand Canyon</h3>
+                <p>Experience breathtaking views.</p>
+            </div>
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Boston">
+                <h3>Boston</h3>
+                <p>Explore historic streets and rich American heritage.</p>
+            </div>
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Los Angeles">
+                <h3>Los Angeles</h3>
+                <p>Experience Hollywood glamour and sunny beaches.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Chicago">
+                <h3>Chicago</h3>
+                <p>Marvel at stunning architecture and jazz heritage.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Miami">
+                <h3>Santa Fe</h3>
+                <p>Enjoy vibrant Markets and Nature.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Las Vegas">
+                <h3>Las Vegas</h3>
+                <p>The ultimate entertainment and casino city in the desert.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Seattle">
+                <h3>Hawaii</h3>
+                <p>Tropical adventure awaits.</p>
+            </div>
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Boston">
+                <h3>San Diego</h3>
+                <p>Enjoy the best weather all year round.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Miami">
+                <h3>Miami</h3>
+                <p>Enjoy vibrant nightlife and tropical beaches.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Las Vegas">
+                <h3>Alaska</h3>
+                <p>Unexplored wilderness awaits.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Seattle">
+                <h3>Seattle</h3>
+                <p>Discover iconic coffee culture and scenic waterfront views.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Denver">
+                <h3>Denver</h3>
+                <p>Gateway to the Rockies with outdoor adventures and city vibes.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="New Orleans">
+                <h3>New Orleans</h3>
+                <p>Immerse yourself in jazz, Creole cuisine, and colorful festivals.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Portland">
+                <h3>Portland</h3>
+                <p>Quirky culture, coffee, and lush Pacific Northwest scenery.</p>
+            </div>
+            
+            <div class="trip-card">
+                <img src="https://via.placeholder.com/300x200" alt="Austin">
+                <h3>Austin</h3>
+                <p>Live music capital with vibrant food and tech culture.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="tripForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Marco Vasco. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

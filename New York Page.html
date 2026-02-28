@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel USA - Marco Vasco</title>
+    <link rel="stylesheet" href="stylesheetcitypages.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Adventure Travels</div>
+        <nav>
+            <ul>
+                <li><a href="Version2.html">Destinations</a></li>
+                <li><a href="Version2.html">Trips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explore New York</h1>
+        <p>
+            See what the city that never sleeps has in store for you
+        </p>
+        
+        <div class="content">
+            <img src="NewYorkPicture.jpg" alt="Example">
+
+            <div class="text-section">
+                <h2>Things to Explore in New York City</h2>
+                <ul>
+                    <li><strong>Statue of Liberty & Ellis Island</strong> – Iconic landmarks and immigration history.</li>
+                    <li><strong>Central Park</strong> – Scenic walks, boating, and outdoor activities.</li>
+                    <li><strong>Times Square</strong> – Bright lights, Broadway theaters, and bustling streets.</li>
+                    <li><strong>Empire State Building</strong> – Panoramic city views from the observation deck.</li>
+                    <li><strong>Brooklyn Bridge</strong> – Walk or bike across this historic bridge.</li>
+                    <li><strong>The Metropolitan Museum of Art</strong> – World-class art collections.</li>
+                    <li><strong>Broadway Shows</strong> – Catch a musical or play in the Theater District.</li>
+                    <li><strong>One World Observatory & 9/11 Memorial</strong> – Stunning views and historical reflection.</li>
+                </ul>
+                <button onclick="scrollToContact()">Book Your Trip</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="tripForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Marco Vasco. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+
+    </body>
+</html>
