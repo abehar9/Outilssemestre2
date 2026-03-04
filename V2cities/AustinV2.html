@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin</title>
+    <link rel="stylesheet" href="stylesheetcitypagesV2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Voyage Aventure</div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Austin</h1>
+        <p>
+            Découvrez la capitale mondiale de la musique live et l’énergie unique du Texas
+        </p>
+        
+        <div class="content">
+            <img src="../Austin.jpg" alt="Austin">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Austin</h2>
+                <ul>
+                    <li><strong>Texas State Capitol</strong> – Impressionnant bâtiment historique au cœur de la ville.</li>
+                    <li><strong>Sixth Street</strong> – Rue emblématique connue pour sa musique live et sa vie nocturne animée.</li>
+                    <li><strong>Lady Bird Lake</strong> – Kayak, paddle et vues magnifiques sur la skyline.</li>
+                    <li><strong>Barton Springs Pool</strong> – Piscine naturelle alimentée par une source au cœur de la ville.</li>
+                    <li><strong>Mount Bonnell</strong> – Panorama spectaculaire sur la rivière Colorado.</li>
+                    <li><strong>South Congress Avenue (SoCo)</strong> – Boutiques locales, street art et ambiance bohème.</li>
+                    <li><strong>Festival SXSW</strong> – Événement international mêlant musique, cinéma et technologie.</li>
+                    <li><strong>Zilker Park</strong> – Grand parc urbain idéal pour se détendre et profiter du plein air.</li>
+                    <li><strong>Musique live</strong> – Concerts dans des centaines de salles et bars chaque semaine.</li>
+                    <li><strong>Street art et fresques murales</strong> – Spots photo incontournables comme “I Love You So Much”.</li>
+                    <li><strong>Barbecue texan</strong> – Dégustez le célèbre brisket fumé et les spécialités locales.</li>
+                    <li><strong>Congress Avenue Bridge</strong> – Observation des chauves-souris au coucher du soleil.</li>
+                    <li><strong>The Domain</strong> – Quartier moderne pour le shopping et la gastronomie.</li>
+                    <li><strong>Hamilton Pool Preserve</strong> – Piscine naturelle spectaculaire à proximité d’Austin.</li>
+                    <li><strong>Ambiance texane authentique</strong> – Entre culture cowboy, modernité et créativité.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

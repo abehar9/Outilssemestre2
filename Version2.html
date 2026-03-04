@@ -1,157 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel USA</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>Voyage Aventure</title>
+    <link rel="stylesheet" href="stylesheet2.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- En-tête -->
     <header>
-        <div class="logo">Adventure Travels</div>
+        <div class="logo">Voyage Aventure - Découvrez votre prochaine expédition</div>
+        <p>Voyages préorganisés avec tout planifié pour partir aux États-Unis – excellents avis !</p>
         <nav>
             <ul>
                 <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#trips">Trips</a></li>
+                <li><a href="#trips">Voyages</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Section principale -->
     <section class="hero">
-        <h1>Explore the United States</h1>
-        <p>Discover unforgettable trips across North America.</p>
+        <h1>Explorez les États-Unis</h1>
+        <p>Découvrez des voyages inoubliables à travers l’Amérique du Nord.</p>
         <p>Quel sera votre prochain voyage ?
             Survolez la carte et sélectionnez le continent vers lequel vous souhaitez voyager. 
-            Nous vous afficherons notre sélection de voyages sur mesure vers ce continent. A vous de trier selon vos envies !</p>
-        <p>Les États-Unis offrent une diversité incroyable de voyages pour tous les goûts. Les grandes villes comme New York, Los Angeles ou Chicago séduisent par leur architecture, leur culture et leurs attractions emblématiques, tandis que les parcs nationaux tels que le Grand Canyon, Yellowstone ou Yosemite invitent à la randonnée, au kayak et à la découverte de paysages spectaculaires. Les amateurs d’aventure peuvent parcourir la mythique Route 66 ou la Pacific Coast Highway pour un road trip inoubliable, et ceux passionnés d’histoire et de culture apprécieront les musées et monuments de Washington D.C., Boston ou La Nouvelle-Orléans. Que l’on cherche l’effervescence urbaine, la nature sauvage ou un voyage sur les routes légendaires, les États-Unis promettent des expériences uniques et des souvenirs mémorables.</p>
-        <button onclick="scrollToContact()">Book Your Trip</button>
+            Nous vous afficherons notre sélection de voyages sur mesure vers ce continent. À vous de trier selon vos envies !</p>
+        <p>Les États-Unis offrent une diversité incroyable de voyages pour tous les goûts. Les grandes villes comme New York, Los Angeles ou Chicago séduisent par leur architecture, leur culture et leurs attractions emblématiques, tandis que les parcs nationaux tels que le Grand Canyon, Yellowstone ou Yosemite invitent à la randonnée, au kayak et à la découverte de paysages spectaculaires. Les amateurs d’aventure peuvent parcourir la mythique Route 66 ou la Pacific Coast Highway pour un road trip inoubliable, et ceux passionnés d’histoire et de culture apprécieront les musées et monuments de Washington D.C., Boston ou La Nouvelle-Orléans. Que l’on recherche l’effervescence urbaine, la nature sauvage ou un voyage sur des routes légendaires, les États-Unis promettent des expériences uniques et des souvenirs mémorables.</p>
+        <button onclick="scrollToContact()">Réservez votre voyage</button>
     </section>
 
-    <!-- Featured Trips -->
+    <!-- Voyages en vedette -->
     <section id="trips" class="featured-trips">
-        <h2>Our Favorite Trips</h2>
+        <h2>Nos voyages préférés</h2>
         <div class="trip-cards">
             <div class="trip-card"
-                 onclick="window.open('New York Page.html', '_blank')"
+                 onclick="window.open('V2cities/New York PageV2.html', '_blank')"
                  style="cursor:pointer;">
-                <img src="https://via.placeholder.com/300x200" alt="New York">
-                <h3>New York City</h3>
-                <p>The city that never sleeps.</p>
+                <img src="NewYorkPicture.jpg" alt="New York">
+                <h3>New York</h3>
+                <p>La ville qui ne dort jamais.</p>
             </div>
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Grand Canyon">
+            <div class="trip-card"
+            onclick="window.open('V2cities/GrandCanyonV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="GrandCanyon.jpg" alt="Grand Canyon">
                 <h3>Grand Canyon</h3>
-                <p>Experience breathtaking views.</p>
+                <p>Admirez des panoramas à couper le souffle.</p>
             </div>
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Boston">
+            <div class="trip-card"
+            onclick="window.open('V2cities/BostonV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Boston.jpg" alt="Boston">
                 <h3>Boston</h3>
-                <p>Explore historic streets and rich American heritage.</p>
+                <p>Explorez des rues historiques et un riche patrimoine américain.</p>
             </div>
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Los Angeles">
+            <div class="trip-card"
+            onclick="window.open('V2cities/LAV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="LA.jpg" alt="Los Angeles">
                 <h3>Los Angeles</h3>
-                <p>Experience Hollywood glamour and sunny beaches.</p>
+                <p>Découvrez le glamour d’Hollywood et ses plages ensoleillées.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Chicago">
+            <div class="trip-card"
+            onclick="window.open('V2cities/ChicagoV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Chicago.jpg" alt="Chicago">
                 <h3>Chicago</h3>
-                <p>Marvel at stunning architecture and jazz heritage.</p>
+                <p>Admirez son architecture impressionnante et son héritage jazz.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Miami">
+            <div class="trip-card"
+            onclick="window.open('V2cities/SantaFeV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Santa Fe.jpg" alt="Santa Fe">
                 <h3>Santa Fe</h3>
-                <p>Enjoy vibrant Markets and Nature.</p>
+                <p>Profitez de marchés animés et de paysages naturels.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Las Vegas">
+            <div class="trip-card"
+            onclick="window.open('V2cities/LasVegasV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Las Vegas.jpg" alt="Las Vegas">
                 <h3>Las Vegas</h3>
-                <p>The ultimate entertainment and casino city in the desert.</p>
+                <p>La capitale du divertissement et des casinos dans le désert.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Seattle">
-                <h3>Hawaii</h3>
-                <p>Tropical adventure awaits.</p>
+            <div class="trip-card"
+            onclick="window.open('V2cities/HawaiiV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Hawaii.jpg" alt="Hawaï">
+                <h3>Hawaï</h3>
+                <p>L’aventure tropicale vous attend.</p>
             </div>
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Boston">
+
+            <div class="trip-card"
+            onclick="window.open('V2cities/SanDiegoV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="SanDiego.jpg" alt="San Diego">
                 <h3>San Diego</h3>
-                <p>Enjoy the best weather all year round.</p>
+                <p>Profitez du meilleur climat toute l’année.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Miami">
+            <div class="trip-card"
+            onclick="window.open('V2cities/MiamiV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Miami.jpg" alt="Miami">
                 <h3>Miami</h3>
-                <p>Enjoy vibrant nightlife and tropical beaches.</p>
+                <p>Vie nocturne animée et plages tropicales.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Las Vegas">
+            <div class="trip-card"
+            onclick="window.open('V2cities/AlaskaV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Alaska.jpg" alt="Alaska">
                 <h3>Alaska</h3>
-                <p>Unexplored wilderness awaits.</p>
+                <p>Une nature sauvage encore inexplorée vous attend.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Seattle">
+            <div class="trip-card"
+            onclick="window.open('V2cities/SeattleV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Seattle.jpg" alt="Seattle">
                 <h3>Seattle</h3>
-                <p>Discover iconic coffee culture and scenic waterfront views.</p>
+                <p>Découvrez la culture du café et de superbes vues sur le front de mer.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Denver">
+            <div class="trip-card"
+            onclick="window.open('V2cities/DenverV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Denver.jpg" alt="Denver">
                 <h3>Denver</h3>
-                <p>Gateway to the Rockies with outdoor adventures and city vibes.</p>
+                <p>Porte d’entrée des Rocheuses entre aventures en plein air et ambiance urbaine.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="New Orleans">
-                <h3>New Orleans</h3>
-                <p>Immerse yourself in jazz, Creole cuisine, and colorful festivals.</p>
+            <div class="trip-card"
+                onclick="window.open('V2cities/NewOrleansV2.html', '_blank')"
+                style="cursor:pointer;">
+                <img src="NewOrleans.jpg" alt="La Nouvelle-Orléans">
+                <h3>La Nouvelle-Orléans</h3>
+                <p>Plongez dans le jazz, la cuisine créole et des festivals colorés.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Portland">
+            <div class="trip-card"
+            onclick="window.open('V2cities/PortlandV2.html', '_blank')"
+            style="cursor:pointer;">
+                <img src="Portland.jpg" alt="Portland">
                 <h3>Portland</h3>
-                <p>Quirky culture, coffee, and lush Pacific Northwest scenery.</p>
+                <p>Culture alternative, cafés et paysages verdoyants du Nord-Ouest Pacifique.</p>
             </div>
             
-            <div class="trip-card">
-                <img src="https://via.placeholder.com/300x200" alt="Austin">
+            <div class="trip-card"
+                onclick="window.open('V2cities/AustinV2.html', '_blank')"
+                style="cursor:pointer;">
+                <img src="Austin.jpg" alt="Austin">
                 <h3>Austin</h3>
-                <p>Live music capital with vibrant food and tech culture.</p>
+                <p>Capitale de la musique live avec une scène gastronomique et technologique dynamique.</p>
             </div>
             
         </div>
     </section>
 
-    <!-- Contact Form -->
+    <!-- Formulaire de contact -->
     <section id="contact" class="contact-form">
-        <h2>Contact Us</h2>
+        <h2>Contactez-nous</h2>
         <form id="tripForm">
-            <label for="name">Name:</label>
+            <label for="name">Nom :</label>
             <input type="text" id="name" required>
 
-            <label for="email">Email:</label>
+            <label for="email">Email :</label>
             <input type="email" id="email" required>
 
-            <label for="message">Message:</label>
+            <label for="message">Message :</label>
             <textarea id="message" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit">Envoyer le message</button>
         </form>
         <p id="formMessage"></p>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Marco Vasco. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

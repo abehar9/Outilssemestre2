@@ -7,6 +7,13 @@
     box-sizing: border-box;
 }
 
+.hero {
+    background:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Flag.jpg') center;
+    color: #ffffff;
+    text-align: center;
+    padding: 16rem 2rem;
+}
+
 h1 {
     font-size: 30px;
     margin-top: 20px;
@@ -24,7 +31,7 @@ h1 {
     margin-bottom: 20px;
     width: 600px;              /* adjust size as needed */
     height: auto;
-    border-radius: 10px;       /* optional styling */
+    border-radius: 0px;       /* optional styling */
 }
 
 .hero p {
@@ -41,7 +48,7 @@ h1 {
     background-color: #ff6600;
     color: #fff;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 0px;
     margin-top: 20px;
     margin-left: 40%;
     margin-bottom: 1rem;
@@ -50,6 +57,7 @@ h1 {
 
 .hero .text-section {
     max-width: 650px;
+    color: rgb(252, 241, 241); 
 }
 
 .hero .text-section h2 {
