@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire de Charge de Travail (NASA-TLX)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .instructions {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        .question-block {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .question-block:last-of-type {
+            border-bottom: none;
+        }
+        .dimension-title {
+            font-weight: bold;
+            color: #222;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .dimension-desc {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .scale-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #777;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .rating-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .rating-group label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+        .rating-group input[type="radio"] {
+            margin-bottom: 8px;
+            transform: scale(1.3); /* Grossit un peu les cases à cocher */
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Questionnaire de Charge de Travail (NASA-TLX)</h2>
+        <p class="instructions">Pour chacune des 4 dimensions ci-dessous, veuillez sélectionner la note (de 1 à 10) qui décrit le mieux votre expérience lors de la réalisation de la tâche sur le site web.</p>
+        
+        <form id="nasaTlxForm">
+
+            <div class="question-block">
+                <div class="dimension-title">1. Exigence Mentale</div>
+                <div class="dimension-desc">Quel niveau d'activité mentale et perceptive était nécessaire (mémoriser, regarder, chercher, etc.) ?</div>
+                <div class="scale-labels"><span>Très faible</span><span>Très élevé</span></div>
+                <div class="rating-group">
+                    <label><input type="radio" name="mentale" value="1" required> 1</label>
+                    <label><input type="radio" name="mentale" value="2"> 2</label>
+                    <label><input type="radio" name="mentale" value="3"> 3</label>
+                    <label><input type="radio" name="mentale" value="4"> 4</label>
+                    <label><input type="radio" name="mentale" value="5"> 5</label>
+                    <label><input type="radio" name="mentale" value="6"> 6</label>
+                    <label><input type="radio" name="mentale" value="7"> 7</label>
+                    <label><input type="radio" name="mentale" value="8"> 8</label>
+                    <label><input type="radio" name="mentale" value="9"> 9</label>
+                    <label><input type="radio" name="mentale" value="10"> 10</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="dimension-title">2. Exigence Physique</div>
+                <div class="dimension-desc">Quel niveau d'activité physique était nécessaire (cliquer, scroller, taper au clavier)?</div>
+                <div class="scale-labels"><span>Très faible</span><span>Très élevé</span></div>
+                <div class="rating-group">
+                    <label><input type="radio" name="physique" value="1" required> 1</label>
+                    <label><input type="radio" name="physique" value="2"> 2</label>
+                    <label><input type="radio" name="physique" value="3"> 3</label>
+                    <label><input type="radio" name="physique" value="4"> 4</label>
+                    <label><input type="radio" name="physique" value="5"> 5</label>
+                    <label><input type="radio" name="physique" value="6"> 6</label>
+                    <label><input type="radio" name="physique" value="7"> 7</label>
+                    <label><input type="radio" name="physique" value="8"> 8</label>
+                    <label><input type="radio" name="physique" value="9"> 9</label>
+                    <label><input type="radio" name="physique" value="10"> 10</label>
+                </div>
+            </div>
+
+            <div class="question-block">
+                <div class="dimension-title">3. Performance</div>
+                <div class="dimension-desc">Dans quelle mesure pensez-vous avoir réussi à accomplir les objectifs fixés par l'expérimentateur ?</div>
+                <div class="scale-labels"><span>Très faible</span><span>Très élevé</span></div>
+                <div class="rating-group">
+                    <label><input type="radio" name="performance" value="1" required> 1</label>
+                    <label><input type="radio" name="performance" value="2"> 2</label>
+                    <label><input type="radio" name="performance" value="3"> 3</label>
+                    <label><input type="radio" name="performance" value="4"> 4</label>
+                    <label><input type="radio" name="performance" value="5"> 5</label>
+                    <label><input type="radio" name="performance" value="6"> 6</label>
+                    <label><input type="radio" name="performance" value="7"> 7</label>
+                    <label><input type="radio" name="performance" value="8"> 8</label>
+                    <label><input type="radio" name="performance" value="9"> 9</label>
+                    <label><input type="radio" name="performance" value="10"> 10</label>
+                </div>
+            </div>
+
+
+            <div class="question-block">
+                <div class="dimension-title">4. Frustration</div>
+                <div class="dimension-desc">À quel point vous êtes-vous senti irrité, stressé, frustré pendant la réalisation de la tâche ?</div>
+                <div class="scale-labels"><span>Très faible</span><span>Très élevé</span></div>
+                <div class="rating-group">
+                    <label><input type="radio" name="frustration" value="1" required> 1</label>
+                    <label><input type="radio" name="frustration" value="2"> 2</label>
+                    <label><input type="radio" name="frustration" value="3"> 3</label>
+                    <label><input type="radio" name="frustration" value="4"> 4</label>
+                    <label><input type="radio" name="frustration" value="5"> 5</label>
+                    <label><input type="radio" name="frustration" value="6"> 6</label>
+                    <label><input type="radio" name="frustration" value="7"> 7</label>
+                    <label><input type="radio" name="frustration" value="8"> 8</label>
+                    <label><input type="radio" name="frustration" value="9"> 9</label>
+                    <label><input type="radio" name="frustration" value="10"> 10</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="finaliserExperience()">Terminer l'expérience</button>
+
+            <script>
+                function finaliserExperience() {
+                    const form = document.getElementById('nasaTlxForm');
+                    if (!form.reportValidity()) return; 
+            
+                    const mentale = document.querySelector('input[name="mentale"]:checked').value;
+                    const physique = document.querySelector('input[name="physique"]:checked').value;
+                    const performance = document.querySelector('input[name="performance"]:checked').value;
+                    const frustration = document.querySelector('input[name="frustration"]:checked').value;
+            
+                
+                    const toutesLesDonnees = {
+                        // Données participants
+                        age: sessionStorage.getItem('age'),
+                        sexe: sessionStorage.getItem('sexe'),
+                        main: sessionStorage.getItem('main'),
+                        
+                        // Temps et Tâche
+                        tempsTotalSecondes: sessionStorage.getItem('tempsTotal'),
+                        reponseQCM: sessionStorage.getItem('reponseQCM'),
+                        
+                       //Questionnaire
+                        tlx_mentale: mentale,
+                        tlx_physique: physique,
+                        tlx_performance: performance,
+                        tlx_frustration: frustration
+                    };
+            
+                    
+                    datasave(toutesLesDonnees);
+            
+                
+                    sessionStorage.clear();
+                    
+                    
+                    alert('Merci ! Vos données ont été enregistrées avec succès.');
+                }
+                
+            </script>
+        </form>
+    </div>
+
+</body>
+</html>

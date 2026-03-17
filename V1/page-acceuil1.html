@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="../stylesheet/stylesheet.css">
 </head>
 <body>
+
+    <!--Bouton de fin-->
+    <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+    <script>
+        function terminerTache() {
+            let heureDebut = sessionStorage.getItem('heureDebut');
+            if (heureDebut) {
+                let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                sessionStorage.setItem('tempsTotal', tempsEcoule);
+            }
+            window.location.href = 'qcm1.html';
+        }
+    </script>
+
     <!-- En-tête -->
     <header>
         <div class="logo">Voyage Aventure</div>
@@ -32,21 +47,21 @@
         <h2>Nos voyages préférés</h2>
         <div class="trip-cards">
             <div class="trip-card"
-                onclick="window.open('New York PageV1.html', '_blank')"
+            onclick="window.location.href='NYV1.html'"
                 style="cursor:pointer;">
                 <img src="../imag/NewYorkPicture.jpg" alt="New York">
                     <h3>New York</h3>
                     <p>La ville qui ne dort jamais.</p>
             </div>
             <div class="trip-card"
-                onclick="window.open('Grand CanyonV1.html', '_blank')"
+            onclick="window.location.href='GCV1.html'"
                 style="cursor:pointer;">
                 <img src="../imag/GrandCanyon.jpg" alt="Grand Canyon">
                 <h3>Grand Canyon</h3>
                 <p>Admirez des paysages à couper le souffle.</p>
             </div>
             <div class="trip-card"
-                onclick="window.open('San FranV1.html', '_blank')"
+                onclick="window.location.href='SFV1.html'"
                 style="cursor:pointer;">
                 <img src="../imag/SanFran.jpg" alt="San Francisco">
                 <h3>San Francisco</h3>
