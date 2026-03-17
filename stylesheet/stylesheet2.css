@@ -63,7 +63,7 @@ header nav a {
 
 /* Hero */
 .hero {
-    background: url('Canyon.jpg') center;
+    background: url('../imag/Canyon.jpg') center;
     color: #080808;
     text-align: center;
     padding: 10rem 2rem;
