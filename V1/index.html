@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informations du participant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Évite que le champ déborde */
+            font-size: 16px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Quelques informations avant de commencer</h2>
+        
+        <form id="infoForm">
+            <div class="form-group">
+                <label for="age">Votre âge :</label>
+                <input type="number" id="age" name="age" min="18" max="100" placeholder="Ex: 24" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sexe">Sexe :</label>
+                <select id="sexe" name="sexe" required>
+                    <option value="">Sélectionnez...</option>
+                    <option value="femme">Femme</option>
+                    <option value="homme">Homme</option>
+                    <option value="autre">NA</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Main dominante :</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="main" value="droitier" required> Droitier</label>
+                    <label><input type="radio" name="main" value="gaucher"> Gaucher</label>
+                    <label><input type="radio" name="main" value="ambidextre"> Ambidextre</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="enregistrerInfos()">Continuer</button>
+
+<script>
+    function enregistrerInfos() {
+        const form = document.getElementById('infoForm');
+    
+        if (!form.reportValidity()) return; 
+
+      
+        const age = document.getElementById('age').value;
+        const sexe = document.getElementById('sexe').value;
+        const main = document.querySelector('input[name="main"]:checked').value;
+
+        
+        sessionStorage.setItem('age', age);
+        sessionStorage.setItem('sexe', sexe);
+        sessionStorage.setItem('main', main);
+
+    
+        window.location.href = 'consigne1.html'; 
+    }
+</script>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Fe</title>
+    <link rel="stylesheet" href="../stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+    <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+    <script>
+        function terminerTache() {
+            let heureDebut = sessionStorage.getItem('heureDebut');
+            if (heureDebut) {
+                let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                sessionStorage.setItem('tempsTotal', tempsEcoule);
+            }
+            window.location.href = 'qcm2.html';
+        }
+    </script>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Santa Fe</h1>
+        <p>
+            Découvrez la ville culturelle du Nouveau-Mexique, connue pour son art et son architecture adobe
+        </p>
+        
+        <div class="content">
+            <img src="../imag/Santa Fe.jpg" alt="Santa Fe">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Santa Fe</h2>
+                <ul>
+                    <li><strong>Plaza de Santa Fe</strong> – Place centrale historique avec boutiques et restaurants.</li>
+                    <li><strong>Palais des Gouverneurs</strong> – Site historique et centre culturel amérindien.</li>
+                    <li><strong>Canyon Road</strong> – Quartier artistique avec galeries et studios.</li>
+                    <li><strong>Santa Fe Opera</strong> – Expériences musicales en plein air dans un cadre unique.</li>
+                    <li><strong>Georgia O’Keeffe Museum</strong> – Expositions consacrées à l’artiste emblématique américaine.</li>
+                    <li><strong>Loretto Chapel</strong> – Chapelle célèbre pour son escalier miraculeux en colimaçon.</li>
+                    <li><strong>Meow Wolf</strong> – Installation artistique immersive et interactive.</li>
+                    <li><strong>Santa Fe Railyard</strong> – Espaces culturels, marchés et événements artistiques.</li>
+                    <li><strong>Ten Thousand Waves</strong> – Station thermale japonaise pour détente et bien-être.</li>
+                    <li><strong>Bandelier National Monument</strong> – Ruines anciennes et sentiers de randonnée à proximité.</li>
+                    <li><strong>Ski Santa Fe</strong> – Station de ski et activités hivernales dans les montagnes.</li>
+                    <li><strong>Railyard Park</strong> – Promenades, espaces verts et événements saisonniers.</li>
+                    <li><strong>Santa Fe Farmers Market</strong> – Produits locaux, artisanat et nourriture fraîche.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

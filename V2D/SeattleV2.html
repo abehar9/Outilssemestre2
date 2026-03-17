@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle</title>
+    <link rel="stylesheet" href="../stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+    <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+    <script>
+        function terminerTache() {
+            let heureDebut = sessionStorage.getItem('heureDebut');
+            if (heureDebut) {
+                let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                sessionStorage.setItem('tempsTotal', tempsEcoule);
+            }
+            window.location.href = 'qcm2.html';
+        }
+    </script>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Seattle</h1>
+        <p>
+            Découvrez la ville emblématique du Nord-Ouest, connue pour sa culture musicale, ses cafés et ses paysages
+        </p>
+        
+        <div class="content">
+            <img src="../imag/Seattle.jpg" alt="Seattle">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Seattle</h2>
+                <ul>
+                    <li><strong>Space Needle</strong> – Symbole iconique de la ville avec vue panoramique.</li>
+                    <li><strong>Pike Place Market</strong> – Marché célèbre pour ses produits locaux et le lancer de poissons.</li>
+                    <li><strong>Chihuly Garden and Glass</strong> – Expositions de verre artistique spectaculaires.</li>
+                    <li><strong>Seattle Aquarium</strong> – Découverte de la faune marine du Pacifique Nord-Ouest.</li>
+                    <li><strong>Museum of Pop Culture (MoPOP)</strong> – Histoire de la musique, science-fiction et culture populaire.</li>
+                    <li><strong>Olympic Sculpture Park</strong> – Art en plein air avec vue sur Elliott Bay.</li>
+                    <li><strong>Seattle Art Museum</strong> – Collections variées et expositions temporaires.</li>
+                    <li><strong>Kerry Park</strong> – Point de vue célèbre sur le centre-ville et le Mont Rainier.</li>
+                    <li><strong>Discovery Park</strong> – Grandes étendues de nature, sentiers et plages.</li>
+                    <li><strong>Fremont Troll</strong> – Sculpture urbaine unique sous le pont de Fremont.</li>
+                    <li><strong>Alki Beach</strong> – Plage urbaine idéale pour promenade et détente.</li>
+                    <li><strong>Seattle Great Wheel</strong> – Grande roue sur le front de mer offrant une vue panoramique.</li>
+                    <li><strong>Gas Works Park</strong> – Parc industriel transformé en espace vert avec vue sur le lac Union.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

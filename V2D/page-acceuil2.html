@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Aventure</title>
+    <link rel="stylesheet" href="../stylesheet/stylesheet2.css">
+</head>
+<body>
+    <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+    <script>
+        function terminerTache() {
+            let heureDebut = sessionStorage.getItem('heureDebut');
+            if (heureDebut) {
+                let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                sessionStorage.setItem('tempsTotal', tempsEcoule);
+            }
+            window.location.href = 'qcm2.html';
+        }
+    </script>
+    
+    <!-- En-tête -->
+    <header>
+        <div class="logo">Voyage Aventure - Découvrez votre prochaine expédition</div>
+        <p>Voyages préorganisés avec tout planifié pour partir aux États-Unis – excellents avis !</p>
+        <nav>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#trips">Voyages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="discount" id="announcment">
+        <h1>Au printemps, changez d'air grâce à 250 € offerts !</h1>
+        <p>Utilisez le code SPRING250 pour tout départ avant le 31/05/2026, applicable dès 2100€/ personne à hauteur de 600€ d'avantages.</p>
+        <span class="close-btn" id="closeBtn">&times;</span>
+    </section>
+
+
+    <!-- Section principale -->
+    <section class="hero">
+        <h1>Explorez les États-Unis</h1>
+        <p>Découvrez des voyages inoubliables à travers l’Amérique du Nord.</p>
+        <p>Quel sera votre prochain voyage ?
+            Survolez la carte et sélectionnez le continent vers lequel vous souhaitez voyager. 
+            Nous vous afficherons notre sélection de voyages sur mesure vers ce continent. À vous de trier selon vos envies !</p>
+        <p>Les États-Unis offrent une diversité incroyable de voyages pour tous les goûts. Les grandes villes comme New York, Los Angeles ou Chicago séduisent par leur architecture, leur culture et leurs attractions emblématiques, tandis que les parcs nationaux tels que le Grand Canyon, Yellowstone ou Yosemite invitent à la randonnée, au kayak et à la découverte de paysages spectaculaires. Les amateurs d’aventure peuvent parcourir la mythique Route 66 ou la Pacific Coast Highway pour un road trip inoubliable, et ceux passionnés d’histoire et de culture apprécieront les musées et monuments de Washington D.C., Boston ou La Nouvelle-Orléans. Que l’on recherche l’effervescence urbaine, la nature sauvage ou un voyage sur des routes légendaires, les États-Unis promettent des expériences uniques et des souvenirs mémorables.</p>
+        <button onclick="scrollToContact()">Réservez votre voyage</button>
+    </section>
+
+    <!-- Voyages en vedette -->
+    <section id="trips" class="featured-trips">
+        <h2>Nos voyages préférés</h2>
+        <p> Avis 9.8 /10 </p>
+        <img src="../imag/5stars.png" alt="Exemple">
+        <div class="trip-cards">
+
+            <div class="trip-card"
+            onclick="window.location.href='AlaskaV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Alaska.jpg" alt="Alaska">
+                <h3>Alaska</h3>
+                <p>Une nature sauvage encore inexplorée vous attend.</p>
+            </div>
+
+            <div class="trip-card"
+            onclick="window.location.href='GrandCanyonV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/GrandCanyon.jpg" alt="Grand Canyon">
+                <h3>Grand Canyon</h3>
+                <p>Admirez des panoramas à couper le souffle.</p>
+            </div>
+            <div class="trip-card"
+            onclick="window.location.href='BostonV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Boston.jpg" alt="Boston">
+                <h3>Boston</h3>
+                <p>Explorez des rues historiques et un riche patrimoine américain.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='LAV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/LA.jpg" alt="Los Angeles">
+                <h3>Los Angeles</h3>
+                <p>Découvrez le glamour d’Hollywood et ses plages ensoleillées.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='ChicagoV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Chicago.jpg" alt="Chicago">
+                <h3>Chicago</h3>
+                <p>Admirez son architecture impressionnante et son héritage jazz.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='SantaFeV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Santa Fe.jpg" alt="Santa Fe">
+                <h3>Santa Fe</h3>
+                <p>Profitez de marchés animés et de paysages naturels.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='LasVegasV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Las Vegas.jpg" alt="Las Vegas">
+                <h3>Las Vegas</h3>
+                <p>La capitale du divertissement et des casinos dans le désert.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='HawaiiV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Hawaii.jpg" alt="Hawaï">
+                <h3>Hawaï</h3>
+                <p>L’aventure tropicale vous attend.</p>
+            </div>
+
+            <div class="trip-card"
+            onclick="window.location.href='SanDiegoV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/SanDiego.jpg" alt="San Diego">
+                <h3>San Diego</h3>
+                <p>Profitez du meilleur climat toute l’année.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='MiamiV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Miami.jpg" alt="Miami">
+                <h3>Miami</h3>
+                <p>Vie nocturne animée et plages tropicales.</p>
+            </div>
+            
+
+            <div class="trip-card"
+            onclick="window.location.href='NYV2.html'"
+                 style="cursor:pointer;">
+                <img src="../imag/NewYorkPicture.jpg" alt="New York">
+                <h3>New York</h3>
+                <p>La ville qui ne dort jamais.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='SeattleV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Seattle.jpg" alt="Seattle">
+                <h3>Seattle</h3>
+                <p>Découvrez la culture du café et de superbes vues sur le front de mer.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='DenverV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Denver.jpg" alt="Denver">
+                <h3>Denver</h3>
+                <p>Porte d’entrée des Rocheuses entre aventures en plein air et ambiance urbaine.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='NewOrleansV2.html'"
+                style="cursor:pointer;">
+                <img src="../imag/NewOrleans.jpg" alt="La Nouvelle-Orléans">
+                <h3>La Nouvelle-Orléans</h3>
+                <p>Plongez dans le jazz, la cuisine créole et des festivals colorés.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='PortlandV2.html'"
+            style="cursor:pointer;">
+                <img src="../imag/Portland.jpg" alt="Portland">
+                <h3>Portland</h3>
+                <p>Culture alternative, cafés et paysages verdoyants du Nord-Ouest Pacifique.</p>
+            </div>
+            
+            <div class="trip-card"
+            onclick="window.location.href='AustinV2.html'"
+                style="cursor:pointer;">
+                <img src="../imag/Austin.jpg" alt="Austin">
+                <h3>Austin</h3>
+                <p>Capitale de la musique live avec une scène gastronomique et technologique dynamique.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>

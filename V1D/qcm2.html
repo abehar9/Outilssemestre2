@@ -72,26 +72,26 @@
         <h2>Vérification de la tâche</h2>
         
         <form id="qcmForm">
-            <p class="question">Quel est le tarif pour un séjour à New York pour une personne ? </p>
+            <p class="question">Quelles sont trois types de voyages proposés par le site ?</p>
 
             <label class="option">
                 <input type="radio" name="reponse" value="A" required> 
-                A)  2,556 euros
+                A) Miami, Los Angeles et Chicago
             </label>
             
             <label class="option">
                 <input type="radio" name="reponse" value="B"> 
-                B)  4,554 euros
+                B) New York, Grand Canyon et San Francisco
             </label>
             
             <label class="option">
                 <input type="radio" name="reponse" value="C"> 
-                C)  2,500 euros
+                C) Boston, New York et Denver
             </label>
             
             <label class="option">
                 <input type="radio" name="reponse" value="D"> 
-                D)  1,500 euros
+                D) Grand Canyon, Santa Fe et New York
             </label>
 
             <button type="button" onclick="enregistrerQCM()">Valider ma réponse</button>
@@ -104,7 +104,7 @@
         const reponse = document.querySelector('input[name="reponse"]:checked').value;
         sessionStorage.setItem('reponseQCM', reponse);
 
-        window.location.href = 'formulaireCog.html';
+        window.location.href = '../formulaireCog.html';
     }
 </script>
         </form>

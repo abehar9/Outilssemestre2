@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego</title>
+    <link rel="stylesheet" href="../stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+
+    <header>
+        <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+        <script>
+            function terminerTache() {
+                let heureDebut = sessionStorage.getItem('heureDebut');
+                if (heureDebut) {
+                    let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                    sessionStorage.setItem('tempsTotal', tempsEcoule);
+                }
+                window.location.href = 'qcm2.html';
+            }
+        </script>
+
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez San Diego</h1>
+        <p>
+            Découvrez la ville ensoleillée de Californie, ses plages et son ambiance détendue
+        </p>
+        
+        <div class="content">
+            <img src="../imag/SanDiego.jpg" alt="San Diego">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à San Diego</h2>
+                <ul>
+                    <li><strong>Balboa Park</strong> – Parcs magnifiques, musées et jardins botaniques.</li>
+                    <li><strong>San Diego Zoo</strong> – Zoo mondialement célèbre avec une grande variété d’animaux.</li>
+                    <li><strong>La Jolla Cove</strong> – Plage pittoresque avec otaries et magnifiques couchers de soleil.</li>
+                    <li><strong>USS Midway Museum</strong> – Porte-avions historique transformé en musée interactif.</li>
+                    <li><strong>Gaslamp Quarter</strong> – Quartier animé avec restaurants, bars et architecture victorienne.</li>
+                    <li><strong>Old Town San Diego</strong> – Découverte de l’histoire californienne et culture mexicaine.</li>
+                    <li><strong>Coronado Island</strong> – Plages idylliques et hôtel historique Hotel del Coronado.</li>
+                    <li><strong>Seaport Village</strong> – Shopping et promenades le long du port pittoresque.</li>
+                    <li><strong>Cabrillo National Monument</strong> – Histoire maritime et vues spectaculaires sur l’océan Pacifique.</li>
+                    <li><strong>Point Loma</strong> – Idéal pour les randonnées et panoramas sur la baie de San Diego.</li>
+                    <li><strong>Sunset Cliffs</strong> – Couchers de soleil spectaculaires sur l’océan.</li>
+                    <li><strong>Little Italy</strong> – Restaurants italiens, marchés et ambiance conviviale.</li>
+                    <li><strong>Torrey Pines State Natural Reserve</strong> – Sentiers de randonnée et falaises surplombant la mer.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
