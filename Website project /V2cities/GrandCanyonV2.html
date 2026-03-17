@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Canyon</title>
+    <link rel="stylesheet" href="stylesheetcitypagesV2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Voyage Aventure</div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez le Grand Canyon</h1>
+        <p>
+            Découvrez l'une des merveilles naturelles les plus spectaculaires au monde
+        </p>
+        
+        <div class="content">
+            <img src="../GrandCanyon.jpg" alt="Grand Canyon">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir au Grand Canyon</h2>
+                <ul>
+                    <li><strong>South Rim</strong> – Les points de vue les plus célèbres et panoramas à couper le souffle.</li>
+                    <li><strong>North Rim</strong> – Une expérience plus sauvage et moins fréquentée.</li>
+                    <li><strong>Bright Angel Trail</strong> – Randonnée emblématique avec des vues spectaculaires.</li>
+                    <li><strong>Colorado River</strong> – Descente en rafting au cœur du canyon.</li>
+                    <li><strong>Grand Canyon Skywalk</strong> – Passerelle en verre suspendue au-dessus du vide.</li>
+                    <li><strong>Coucher de soleil à Hopi Point</strong> – Un spectacle naturel inoubliable.</li>
+                    <li><strong>Survol en hélicoptère</strong> – Une vue aérienne impressionnante du canyon.</li>
+                    <li><strong>Observation des étoiles</strong> – Un ciel nocturne exceptionnel loin de la pollution lumineuse.</li>
+                    <li><strong>Desert View Watchtower</strong> – Tour historique offrant des panoramas uniques.</li>
+                    <li><strong>Rim Trail</strong> – Promenade facile avec des vues panoramiques du bord du canyon.</li>
+                    <li><strong>Phantom Ranch</strong> – Séjour unique au fond du canyon pour les randonneurs.</li>
+                    <li><strong>Hermit Trail</strong> – Randonnée aventureuse pour les amateurs de défis.</li>
+                    <li><strong>Grand Canyon Village</strong> – Explorez les bâtiments historiques et les boutiques locales.</li>
+                    <li><strong>Kaibab Trail</strong> – Randonnée offrant des paysages spectaculaires depuis le North Rim.</li>
+                    <li><strong>Wildlife Spotting</strong> – Observez des cerfs, condors et autres animaux sauvages dans leur habitat naturel.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

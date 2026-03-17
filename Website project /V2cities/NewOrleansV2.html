@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Orleans</title>
+    <link rel="stylesheet" href="stylesheetcitypagesV2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Voyage Aventure</div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez New Orleans</h1>
+        <p>
+            Découvrez la ville du jazz, de la culture créole et des fêtes légendaires
+        </p>
+        
+        <div class="content">
+            <img src="../NewOrleans.jpg" alt="New Orleans">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à New Orleans</h2>
+                <ul>
+                    <li><strong>French Quarter</strong> – Quartier historique avec architecture coloniale et ambiance festive.</li>
+                    <li><strong>Bourbon Street</strong> – Rue animée connue pour ses bars, musique live et spectacles.</li>
+                    <li><strong>Jackson Square</strong> – Place emblématique avec artistes de rue et Cathédrale Saint-Louis.</li>
+                    <li><strong>Garden District</strong> – Quartier élégant avec maisons antebellum et balcons en fer forgé.</li>
+                    <li><strong>Café du Monde</strong> – Dégustez les célèbres beignets et café au lait.</li>
+                    <li><strong>Steamboat Natchez</strong> – Croisière sur le Mississippi à bord d’un bateau à vapeur historique.</li>
+                    <li><strong>Mardi Gras World</strong> – Plongée dans l’univers coloré du carnaval et des chars décorés.</li>
+                    <li><strong>Frenchmen Street</strong> – Scène musicale avec jazz, blues et clubs locaux.</li>
+                    <li><strong>Preservation Hall</strong> – Salle emblématique de concerts de jazz authentique.</li>
+                    <li><strong>City Park</strong> – Parc immense avec jardins, sculptures et activités en plein air.</li>
+                    <li><strong>Audubon Aquarium of the Americas</strong> – Faune marine et expositions interactives.</li>
+                    <li><strong>National WWII Museum</strong> – Musée interactif retraçant l’histoire de la Seconde Guerre mondiale.</li>
+                    <li><strong>St. Louis Cemetery No. 1</strong> – Cimetière historique avec tombes célèbres et architecture unique.</li>
+                    <li><strong>Magazine Street</strong> – Shopping, cafés et ambiance locale typique de la Nouvelle-Orléans.</li>
+                    <li><strong>Crescent Park</strong> – Promenade avec vues sur le fleuve Mississippi et espaces verts relaxants.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
