@@ -40,7 +40,7 @@ header nav a {
 
 /* Hero */
 .hero {
-    background: url('HEADER.jpg') center/cover no-repeat;
+    background: url('../imag/HEADER.jpg') center/cover no-repeat;
     color: #080808;
     text-align: center;
     padding: 16rem 2rem;
