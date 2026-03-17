@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York</title>
+    <link rel="stylesheet" href="stylesheetcitypagesV2.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Voyage Adventure</div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <h1>Explorez New York</h1>
+        <p>
+            Découvrez ce que la ville qui ne dort jamais vous réserve
+        </p>
+
+        <div class="img">
+            <img src="../Hotdog.png" alt="Exemple">
+            <img src="../Statue.png" alt="Exemple">
+            <img src="../Hotdog.png" alt="Exemple">
+            <img src="../Statue.png" alt="Exemple">
+            <img src="../Hotdog.png" alt="Exemple">
+            <img src="../Statue.png" alt="Exemple">
+        </div>
+
+        
+        <div class="content">
+            <div class="img">
+                <img src="../NewYorkPicture.jpg" alt="Exemple">
+                <img src="../Friendsimage.png" alt="Exemple">
+            </div>
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à New York</h2>
+                <ul>
+                    <li><strong>Statue de la Liberté & Ellis Island</strong> – Monuments emblématiques et histoire de l’immigration.</li>
+                    <li><strong>Central Park</strong> – Promenades pittoresques, barque et activités en plein air.</li>
+                    <li><strong>Times Square</strong> – Lumières éclatantes, théâtres de Broadway et rues animées.</li>
+                    <li><strong>Empire State Building</strong> – Vue panoramique sur la ville depuis l’observatoire.</li>
+                    <li><strong>Pont de Brooklyn</strong> – Traversez ce pont historique à pied ou à vélo.</li>
+                    <li><strong>Musée Métropolitain d’Art</strong> – Collections d’art de renommée mondiale.</li>
+                    <li><strong> --- Prix total par personne 1,500 euros --- </strong></li>
+                    <li><strong> Avec la possibilité d'ajouter les éléments supplémentaires:</strong></li>
+                    <li><strong>Spectacles de Broadway</strong> – Assistez à une comédie musicale ou une pièce dans le quartier des théâtres.</li>
+                    <li><strong>One World Observatory & Mémorial du 11 septembre</strong> – Vues impressionnantes et moment de recueillement historique.</li>
+                    <li><strong>High Line</strong> – Promenade suspendue aménagée sur une ancienne voie ferrée avec vues uniques sur la ville.</li>
+                    <li><strong>Rockefeller Center & Top of the Rock</strong> – Complexe emblématique offrant une vue spectaculaire sur Manhattan.</li>
+                    <li><strong>Grand Central Terminal</strong> – Gare historique célèbre pour son plafond astronomique et son architecture majestueuse.</li>
+                    <li><strong>SoHo</strong> – Quartier branché connu pour ses galeries d’art, boutiques tendance et bâtiments en fonte.</li>
+                    <li><strong>Prix pour 2 personnes: 10 % remise</strong></li>
+                    <li><strong>Prix pour 3 personnes: 11 % remise</strong></li>
+                    <li><strong>Prix pour 4 personnes: 12 % remise</strong></li>
+                    <li><strong>Prix pour 5 personnes: 13 % remise</strong></li>
+
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="tripForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Aventure</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="logo">Voyage Aventure</div>
+        <nav>
+            <ul>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#trips">Voyages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section principale -->
+    <section class="hero">
+            <h1>Explorez les États-Unis</h1>
+            <p>Découvrez des voyages inoubliables à travers l’Amérique du Nord.</p>
+
+        <button onclick="scrollToContact()">Réservez votre voyage</button>
+    </section>
+
+    <!-- Voyages en vedette -->
+    <section id="trips" class="featured-trips">
+        <h2>Nos voyages préférés</h2>
+        <div class="trip-cards">
+            <div class="trip-card"
+                onclick="window.open('New York PageV1.html', '_blank')"
+                style="cursor:pointer;">
+                <img src="NewYorkPicture.jpg" alt="New York">
+                    <h3>New York</h3>
+                    <p>La ville qui ne dort jamais.</p>
+            </div>
+            <div class="trip-card"
+                onclick="window.open('Grand CanyonV1.html', '_blank')"
+                style="cursor:pointer;">
+                <img src="GrandCanyon.jpg" alt="Grand Canyon">
+                <h3>Grand Canyon</h3>
+                <p>Admirez des paysages à couper le souffle.</p>
+            </div>
+            <div class="trip-card"
+                onclick="window.open('San FranV1.html', '_blank')"
+                style="cursor:pointer;">
+                <img src="SanFran.jpg" alt="San Francisco">
+                <h3>San Francisco</h3>
+                <p>Des aventures au Golden Gate vous attendent.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
