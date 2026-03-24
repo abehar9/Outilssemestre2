@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denver</title>
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+
+     <!--Bouton de fin-->
+ <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+ <script>
+     function terminerTache() {
+         let heureDebut = sessionStorage.getItem('heureDebut');
+         if (heureDebut) {
+             let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+             sessionStorage.setItem('tempsTotal', tempsEcoule);
+         }
+         window.location.href = 'qcm1.html';
+     }
+ </script>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Denver</h1>
+        <p>
+            Découvrez la ville mile-high au cœur des Rocheuses et de l’aventure en plein air
+        </p>
+        
+        <div class="content">
+            <img src="imag/Denver.jpg" alt="Denver">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Denver</h2>
+                <ul>
+                    <li><strong>Red Rocks Park & Amphitheatre</strong> – Amphithéâtre naturel spectaculaire entouré de formations rocheuses rouges.</li>
+                    <li><strong>Rocky Mountain National Park</strong> – Parc national offrant randonnées et panoramas alpins.</li>
+                    <li><strong>Denver Botanic Gardens</strong> – Jardins botaniques magnifiques au cœur de la ville.</li>
+                    <li><strong>Union Station</strong> – Gare historique transformée en lieu animé avec restaurants et boutiques.</li>
+                    <li><strong>Larimer Square</strong> – Quartier historique avec architecture victorienne et restaurants tendance.</li>
+                    <li><strong>Denver Art Museum</strong> – Musée d’art réputé pour son architecture moderne.</li>
+                    <li><strong>16th Street Mall</strong> – Rue piétonne idéale pour le shopping et les promenades.</li>
+                    <li><strong>Mount Evans Scenic Byway</strong> – Route panoramique offrant des vues impressionnantes en altitude.</li>
+                    <li><strong>City Park</strong> – Grand parc urbain avec vue sur les montagnes.</li>
+                    <li><strong>Denver Zoo</strong> – Zoo populaire avec une grande variété d’animaux.</li>
+                    <li><strong>Coors Field</strong> – Stade des Colorado Rockies avec vue sur les Rocheuses.</li>
+                    <li><strong>RiNo Art District</strong> – Quartier artistique célèbre pour ses fresques murales colorées.</li>
+                    <li><strong>Cherry Creek</strong> – Quartier chic parfait pour le shopping et la gastronomie.</li>
+                    <li><strong>Excursion dans les montagnes Rocheuses</strong> – Randonnée, ski ou observation de la faune.</li>
+                    <li><strong>Brasseries artisanales</strong> – Découvrez la scène dynamique des microbrasseries de Denver.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>

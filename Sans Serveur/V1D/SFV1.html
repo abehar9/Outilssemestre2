@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francisco</title>
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypages.css">
+</head>
+<body>
+
+    <!--Bouton de fin-->
+    <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+    <script>
+        function terminerTache() {
+            let heureDebut = sessionStorage.getItem('heureDebut');
+            if (heureDebut) {
+                let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+                sessionStorage.setItem('tempsTotal', tempsEcoule);
+            }
+            window.location.href = 'qcm2.html';
+        }
+    </script>
+    
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil1.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez San Francisco</h1>
+        <p>
+            Découvrez la ville emblématique aux collines mythiques et à l’atmosphère unique
+        </p>
+        
+        <div class="content">
+            <img src="imag/SanFran.jpg" alt="San Francisco">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à San Francisco</h2>
+                <ul>
+                    <li><strong>Golden Gate Bridge</strong> – Traversez l’un des ponts les plus célèbres au monde.</li>
+                    <li><strong>Alcatraz Island</strong> – Explorez l’ancienne prison légendaire au cœur de la baie.</li>
+                    <li><strong>Fisherman’s Wharf</strong> – Dégustez des fruits de mer et profitez de l’ambiance du port.</li>
+                    <li><strong>Lombard Street</strong> – Descendez la rue la plus sinueuse de la ville.</li>
+                    <li><strong>Chinatown</strong> – Découvrez l’un des plus anciens et plus grands quartiers chinois d’Amérique du Nord.</li>
+                    <li><strong>Painted Ladies</strong> – Admirez les célèbres maisons victoriennes colorées.</li>
+                    <li><strong>Cable Cars</strong> – Montez à bord des tramways historiques pour une expérience typique.</li>
+                    <li><strong>Twin Peaks</strong> – Profitez d’une vue panoramique spectaculaire sur la ville.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consignes du projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .consignes-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="consignes-box">
+        <h1>Consignes :</h1>
+        
+        <p>
+            <strong>Voici le déroulement de l'expérience, étape par étape : </strong><br><br>
+            1. Votre mission : Parcourez le site proposé jusqu'à trouver le tarif spécifique pour un séjour à New York pour une personne. Vous pouvez naviguez librement sur le site.<br><br>
+            2. Une fois que vous avez trouvé les informations demandées, cliquez sur le bouton "Fin".<br><br>
+            3. Un questionnaire à choix multiples (QCM) s'affichera. Il vous suffira de sélectionner la bonne réponse en fonction de ce que vous avez trouvé sur le site. <br><br>
+            4. Pour terminer, un dernier court formulaire vous sera proposé à la fin.
+        </p>
+
+        <button onclick="demarrerChrono()">J'ai compris, accéder au site</button>
+
+        <script>
+            function demarrerChrono() {
+
+                sessionStorage.setItem('heureDebut', Date.now());
+
+                window.location.href = 'page-acceuil2.html';
+            }
+        </script>
+    </div>
+
+</body>
+</html>

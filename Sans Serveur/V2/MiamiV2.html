@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami</title>
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+
+      <!--Bouton de fin-->
+ <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+ <script>
+     function terminerTache() {
+         let heureDebut = sessionStorage.getItem('heureDebut');
+         if (heureDebut) {
+             let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+             sessionStorage.setItem('tempsTotal', tempsEcoule);
+         }
+         window.location.href = 'qcm1.html';
+     }
+ </script>
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Miami</h1>
+        <p>
+            Plages ensoleillées, vie nocturne animée et culture floridienne unique vous attendent
+        </p>
+        
+        <div class="content">
+            <img src="imag/Miami.jpg" alt="Miami">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Miami</h2>
+                <ul>
+                    <li><strong>South Beach</strong> – Plages emblématiques et architecture Art déco colorée.</li>
+                    <li><strong>Ocean Drive</strong> – Promenade animée avec restaurants et bars en bord de mer.</li>
+                    <li><strong>Little Havana</strong> – Immersion dans la culture cubaine avec musique et cuisine authentique.</li>
+                    <li><strong>Wynwood Walls</strong> – Street art et galeries d’art moderne.</li>
+                    <li><strong>Miami Beach Boardwalk</strong> – Promenade idéale pour vélo et marche avec vue sur l’océan.</li>
+                    <li><strong>Bayside Marketplace</strong> – Shopping, restaurants et animations au bord de l’eau.</li>
+                    <li><strong>Vizcaya Museum & Gardens</strong> – Manoir historique et jardins luxuriants.</li>
+                    <li><strong>Everglades National Park</strong> – Excursions pour découvrir la faune et la flore uniques.</li>
+                    <li><strong>Lincoln Road</strong> – Rue piétonne avec boutiques, cafés et ambiance animée.</li>
+                    <li><strong>Coral Gables & Venetian Pool</strong> – Quartier élégant avec piscine historique et architecture méditerranéenne.</li>
+                    <li><strong>Art Deco Historic District</strong> – Découverte des bâtiments emblématiques du style Art déco.</li>
+                    <li><strong>Phillip and Patricia Frost Museum of Science</strong> – Science, planétarium et aquarium interactif.</li>
+                    <li><strong>Miami Seaquarium</strong> – Spectacles marins et animaux exotiques.</li>
+                    <li><strong>Jungle Island</strong> – Parc animalier et aventures en famille.</li>
+                    <li><strong>Sunset Harbour</strong> – Quartier branché avec cafés et couchers de soleil magnifiques.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>

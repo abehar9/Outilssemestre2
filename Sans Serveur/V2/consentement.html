@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consignes du projet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .consignes-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="consignes-box">
+        <h1>Formulaire de consentement</h1>
+        
+        <p>
+            <strong>Avant de commencer, merci de prendre connaissance des points suivants : </strong><br><br>
+
+            <ul>
+                <li><strong>Anonymat :</strong> Toutes les données récoltées (temps de navigation, réponses au QCM, etc.) sont strictement anonymes et confidentielles.</li><br>
+                <li><strong>Cadre strict :</strong> Ces données seront utilisées exclusivement dans le cadre de ce projet de recherche en sciences cognitives et informatique.</li><br>
+                <li><strong>Liberté :</strong> Votre participation est entièrement volontaire. Vous êtes libre d'interrompre l'expérience et de fermer la page à tout moment, sans avoir à vous justifier.</li><br>
+            </ul>
+        </p>
+
+        <button onclick="window.location.href='index.html'">J'accepte</button>
+    </div>
+
+</body>
+</html>

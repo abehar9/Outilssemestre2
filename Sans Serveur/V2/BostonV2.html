@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston</title>
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypagesV2.css">
+</head>
+<body>
+
+    <!--Bouton de fin-->
+ <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+ <script>
+     function terminerTache() {
+         let heureDebut = sessionStorage.getItem('heureDebut');
+         if (heureDebut) {
+             let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+             sessionStorage.setItem('tempsTotal', tempsEcoule);
+         }
+         window.location.href = 'qcm1.html';
+     }
+ </script>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Explorez Boston</h1>
+        <p>
+            Découvrez une ville historique au charme historique et à l’esprit universitaire unique
+        </p>
+        
+        <div class="content">
+            <img src="imag/Boston.jpg" alt="Boston">
+    
+            <div class="text-section">
+                <h2>Choses à découvrir à Boston</h2>
+                <ul>
+                    <li><strong>Freedom Trail</strong> – Parcours historique retraçant la révolution américaine.</li>
+                    <li><strong>Harvard University</strong> – Université mythique située à Cambridge.</li>
+                    <li><strong>MIT</strong> – Institut technologique de renommée mondiale.</li>
+                    <li><strong>Boston Common</strong> – Le plus ancien parc public des États-Unis.</li>
+                    <li><strong>Faneuil Hall Marketplace</strong> – Boutiques, restaurants et animations de rue.</li>
+                    <li><strong>Quincy Market</strong> – Dégustez les spécialités locales comme la clam chowder.</li>
+                    <li><strong>Fenway Park</strong> – Stade emblématique des Red Sox.</li>
+                    <li><strong>Beacon Hill</strong> – Quartier pittoresque aux rues pavées et maisons en briques rouges.</li>
+                    <li><strong>Boston Tea Party Ships & Museum</strong> – Revivez un événement clé de l’histoire américaine.</li>
+                    <li><strong>New England Aquarium</strong> – Découvrez la faune marine de l’Atlantique.</li>
+                    <li><strong>North End</strong> – Quartier italien célèbre pour ses restaurants authentiques.</li>
+                    <li><strong>Seaport District</strong> – Quartier moderne avec vues sur le port et restaurants tendance.</li>
+                    <li><strong>Isabella Stewart Gardner Museum</strong> – Musée unique dans un palais inspiré de Venise.</li>
+                    <li><strong>Charles River Esplanade</strong> – Promenade agréable le long de la rivière Charles.</li>
+                    <li><strong>Croisière dans le port de Boston</strong> – Admirez la skyline depuis l’eau.</li>
+                </ul>
+                <button onclick="scrollToContact()">Réservez votre voyage</button>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-form">
+        <h2>Contactez-nous</h2>
+        <form id="tripForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Envoyer le message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>
