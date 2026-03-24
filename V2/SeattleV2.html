@@ -5,8 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seattle</title>
-    <link rel="stylesheet" href="../stylesheet/stylesheetcitypagesV2.css">
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypagesV2.css">
 </head>
+
+ <!--Bouton de fin-->
+ <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+ <script>
+     function terminerTache() {
+         let heureDebut = sessionStorage.getItem('heureDebut');
+         if (heureDebut) {
+             let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+             sessionStorage.setItem('tempsTotal', tempsEcoule);
+         }
+         window.location.href = 'qcm1.html';
+     }
+ </script>
 <body>
     <!-- Header -->
     <header>
@@ -25,7 +39,7 @@
         </p>
         
         <div class="content">
-            <img src="../imag/Seattle.jpg" alt="Seattle">
+            <img src="imag/Seattle.jpg" alt="Seattle">
     
             <div class="text-section">
                 <h2>Choses à découvrir à Seattle</h2>
@@ -67,6 +81,6 @@
         <p id="formMessage"></p>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>

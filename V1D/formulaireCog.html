@@ -179,6 +179,8 @@
 
             <button type="button" onclick="finaliserExperience()">Terminer l'expérience</button>
 
+            <script src="../savedata.js"></script>
+
             <script>
                 function finaliserExperience() {
                     const form = document.getElementById('nasaTlxForm');
@@ -191,6 +193,9 @@
             
                 
                     const toutesLesDonnees = {
+                        //Condition de l'expérience
+                        condition : V1D,
+
                         // Données participants
                         age: sessionStorage.getItem('age'),
                         sexe: sessionStorage.getItem('sexe'),
@@ -208,13 +213,13 @@
                     };
             
                     
-                    datasave(toutesLesDonnees);
+                    savedata(toutesLesDonnees);
             
                 
                     sessionStorage.clear();
                     
                     
-                    alert('Merci ! Vos données ont été enregistrées avec succès.');
+                    alert('Merci !');
                 }
                 
             </script>

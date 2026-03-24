@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawaï</title>
-    <link rel="stylesheet" href="../stylesheet/stylesheetcitypagesV2.css">
+    <link rel="stylesheet" href="stylesheet/stylesheetcitypagesV2.css">
 </head>
 <body>
+
+     <!--Bouton de fin-->
+ <button class="btn-fin" onclick="terminerTache()">Fin</button>
+
+ <script>
+     function terminerTache() {
+         let heureDebut = sessionStorage.getItem('heureDebut');
+         if (heureDebut) {
+             let tempsEcoule = Math.round((Date.now() - heureDebut) / 1000);
+             sessionStorage.setItem('tempsTotal', tempsEcoule);
+         }
+         window.location.href = 'qcm1.html';
+     }
+ </script>
     <!-- Header -->
     <header>
         <div class="logo"><a href="page-acceuil2.html" style="text-decoration: none; color: inherit;">Voyage Adventure</a></div>
@@ -24,7 +38,7 @@
         </p>
         
         <div class="content">
-            <img src="../imag/Hawaii.jpg" alt="Hawaï">
+            <img src="imag/Hawaii.jpg" alt="Hawaï">
     
             <div class="text-section">
                 <h2>Choses à découvrir à Hawaï</h2>
@@ -69,7 +83,7 @@
         <p id="formMessage"></p>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 
 </body>
 </html>
